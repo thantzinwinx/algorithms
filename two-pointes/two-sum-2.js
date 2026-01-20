@@ -1,16 +1,16 @@
 function pairOfSum(nums, target) {
-  let left = 0,
-    right = nums.length - 1;
+  let left = 0;
+  let right = nums.length - 1;
 
   while (left < right) {
     const current_sum = nums[left] + nums[right];
     if (current_sum === target) {
+      console.log("[Found]", nums[left], nums[right]);
       return true;
-    }
-    if (current_sum > target) {
-      right--;
-    } else {
+    } else if (current_sum < target) {
       left++;
+    } else {
+      right--;
     }
   }
   return false;
