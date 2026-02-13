@@ -7,7 +7,7 @@ const intervals = [
 
 function mergeIntervals(intervals) {
   //sort the intervals
-  const sortedIntervals = intervals.sort((a, b) => a[1] - b[1]);
+  const sortedIntervals = intervals.sort((a, b) => a[0] - b[0]);
 
   //create state for the final merged intervals
   const mergedIntervals = [];
